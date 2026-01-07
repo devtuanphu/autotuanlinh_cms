@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_social_medias",
+  "info": {
+    "displayName": "Social Media",
+    "description": "Component social media với icon và URL",
+    "icon": "share-alt"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "url": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
+

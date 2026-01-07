@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_home_hero_sliders",
+  "info": {
+    "displayName": "Hero Slider",
+    "description": "Component hero slider cho trang home",
+    "icon": "slides"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "specialTitle": {
+      "type": "string",
+      "required": false
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  },
+  "config": {}
+}
+

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_about_buttons",
+  "info": {
+    "displayName": "Button",
+    "description": "Component button với text và URL",
+    "icon": "mouse-pointer"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "icon": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

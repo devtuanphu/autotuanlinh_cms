@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_process_sections",
+  "info": {
+    "displayName": "Process Section",
+    "description": "Section quy trình mua hàng với title, subtitle và các bước",
+    "icon": "tasks"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Quy trình mua hàng"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "steps": {
+      "type": "component",
+      "component": "home.process-step",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_special_promotions_sections",
+  "info": {
+    "displayName": "Special Promotions Section",
+    "description": "Section khuyến mãi đặc biệt với title, subtitle và danh sách promotion cards",
+    "icon": "gift"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "KHUYẾN MÃI ĐẶC BIỆT"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "promotionCards": {
+      "type": "component",
+      "component": "home.promotion-card",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

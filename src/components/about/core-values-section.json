@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_about_core_values_sections",
+  "info": {
+    "displayName": "Core Values Section",
+    "description": "Section giá trị cốt lõi của công ty",
+    "icon": "heart"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": false,
+      "default": "Giá trị cốt lõi"
+    },
+    "badgeIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleHighlight": {
+      "type": "string",
+      "required": false
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "valueCards": {
+      "type": "component",
+      "component": "about.value-card",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

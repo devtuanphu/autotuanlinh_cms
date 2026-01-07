@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_gallery_sections",
+  "info": {
+    "displayName": "Gallery Section",
+    "description": "Section gallery hình ảnh thực tế với title, subtitle và danh sách ảnh",
+    "icon": "images"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Hình ảnh thực tế"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "images": {
+      "type": "component",
+      "component": "shared.image-with-alt",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

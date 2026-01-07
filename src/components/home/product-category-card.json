@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_product_category_cards",
+  "info": {
+    "displayName": "Product Category Card",
+    "description": "Component thẻ danh mục sản phẩm, tự động lấy thông tin từ danh mục",
+    "icon": "folder"
+  },
+  "options": {},
+  "attributes": {
+    "danhMucSanPham": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::danh-muc-san-pham.danh-muc-san-pham",
+      "required": true
+    }
+  },
+  "config": {}
+}
+

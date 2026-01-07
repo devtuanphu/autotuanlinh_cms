@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_featured_products_sections",
+  "info": {
+    "displayName": "Featured Products Section",
+    "description": "Section sản phẩm nổi bật với title, subtitle và danh sách sản phẩm",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Sản phẩm nổi bật"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::san-pham.san-pham",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

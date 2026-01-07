@@ -1,0 +1,61 @@
+{
+  "collectionName": "components_home_featured_product_cards",
+  "info": {
+    "displayName": "Featured Product Card",
+    "description": "Component thẻ sản phẩm nổi bật với hình ảnh, badge, rating, giá",
+    "icon": "shopping-bag"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "badges": {
+      "type": "component",
+      "component": "home.product-badge",
+      "repeatable": true,
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "rating": {
+      "type": "decimal",
+      "required": false,
+      "min": 0,
+      "max": 5
+    },
+    "reviewCount": {
+      "type": "integer",
+      "required": false,
+      "min": 0
+    },
+    "price": {
+      "type": "decimal",
+      "required": false,
+      "min": 0
+    },
+    "originalPrice": {
+      "type": "decimal",
+      "required": false,
+      "min": 0
+    },
+    "buttonText": {
+      "type": "string",
+      "required": false,
+      "default": "Thêm vào giỏ hàng →"
+    },
+    "sanPham": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::san-pham.san-pham",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

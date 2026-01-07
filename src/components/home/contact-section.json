@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_contact_sections",
+  "info": {
+    "displayName": "Contact Section",
+    "description": "Section liên hệ với title, subtitle và danh sách thông tin liên hệ",
+    "icon": "envelope"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Liên hệ với chúng tôi"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "contactInfoCards": {
+      "type": "component",
+      "component": "home.contact-info-card",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_about_cta_sections",
+  "info": {
+    "displayName": "CTA Section",
+    "description": "Section call-to-action sẵn sàng phục vụ",
+    "icon": "phone-alt"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": false,
+      "default": "Liên hệ"
+    },
+    "badgeIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleHighlight": {
+      "type": "string",
+      "required": false
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "primaryButton": {
+      "type": "component",
+      "component": "about.button",
+      "repeatable": false,
+      "required": false
+    },
+    "secondaryButton": {
+      "type": "component",
+      "component": "about.button",
+      "repeatable": false,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

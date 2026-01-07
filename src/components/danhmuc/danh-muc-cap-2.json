@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_danhmuc_danh_muc_cap_2s",
+  "info": {
+    "displayName": "Danh mục sản phẩm cấp 2",
+    "icon": "book"
+  },
+  "options": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "text",
+      "required": true
+    },
+    "danhMucCapBa": {
+      "type": "component",
+      "component": "danhmuc.danh-muc-cap-3",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}

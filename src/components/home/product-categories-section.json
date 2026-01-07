@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_product_categories_sections",
+  "info": {
+    "displayName": "Product Categories Section",
+    "description": "Section danh mục sản phẩm với title, subtitle và danh sách danh mục",
+    "icon": "folder-open"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Danh mục sản phẩm"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "danhMucSanPhams": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::danh-muc-san-pham.danh-muc-san-pham",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

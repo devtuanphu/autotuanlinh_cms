@@ -1,0 +1,118 @@
+{
+  "kind": "singleType",
+  "collectionName": "ve_chung_tois",
+  "info": {
+    "singularName": "ve-chung-toi",
+    "pluralName": "ve-chung-tois",
+    "displayName": "Về chúng tôi",
+    "description": "Single type để quản lý trang về chúng tôi"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "heroSection": {
+      "type": "component",
+      "component": "home.hero-slider",
+      "repeatable": true,
+      "required": false
+    },
+    "introductionSection": {
+      "type": "component",
+      "component": "about.introduction-section",
+      "repeatable": false,
+      "required": false
+    },
+    "achievementsSection": {
+      "type": "component",
+      "component": "home.stats-section",
+      "repeatable": false,
+      "required": false
+    },
+    "coreValuesSection": {
+      "type": "component",
+      "component": "about.core-values-section",
+      "repeatable": false,
+      "required": false
+    },
+    "historyTimelineSection": {
+      "type": "component",
+      "component": "about.history-timeline-section",
+      "repeatable": false,
+      "required": false
+    },
+    "commitmentsSection": {
+      "type": "component",
+      "component": "about.commitments-section",
+      "repeatable": false,
+      "required": false
+    },
+    "partnersSection": {
+      "type": "component",
+      "component": "home.partner-brands-section",
+      "repeatable": false,
+      "required": false
+    },
+    "certificationsSection": {
+      "type": "component",
+      "component": "about.certifications-section",
+      "repeatable": false,
+      "required": false
+    },
+    "showroomSection": {
+      "type": "component",
+      "component": "about.showroom-section",
+      "repeatable": false,
+      "required": false
+    },
+    "workshopSection": {
+      "type": "component",
+      "component": "about.workshop-section",
+      "repeatable": false,
+      "required": false
+    },
+    "storeLocationsSection": {
+      "type": "component",
+      "component": "about.store-locations-section",
+      "repeatable": false,
+      "required": false
+    },
+    "processSection": {
+      "type": "component",
+      "component": "home.process-section",
+      "repeatable": false,
+      "required": false
+    },
+    "beforeAfterSection": {
+      "type": "component",
+      "component": "about.before-after-section",
+      "repeatable": false,
+      "required": false
+    },
+    "teamSection": {
+      "type": "component",
+      "component": "about.team-section",
+      "repeatable": false,
+      "required": false
+    },
+    "testimonialsSection": {
+      "type": "component",
+      "component": "home.testimonials-section",
+      "repeatable": false,
+      "required": false
+    },
+    "ctaSection": {
+      "type": "component",
+      "component": "about.cta-section",
+      "repeatable": false,
+      "required": false
+    }
+  }
+}

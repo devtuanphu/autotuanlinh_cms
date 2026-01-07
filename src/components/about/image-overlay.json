@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_about_image_overlays",
+  "info": {
+    "displayName": "Image Overlay",
+    "description": "Component cho overlay text trên hình ảnh",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

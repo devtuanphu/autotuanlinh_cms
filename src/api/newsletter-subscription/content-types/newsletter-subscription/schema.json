@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "newsletter_subscriptions",
+  "info": {
+    "singularName": "newsletter-subscription",
+    "pluralName": "newsletter-subscriptions",
+    "displayName": "Newsletter Subscription",
+    "description": "Collection type để lưu email đăng ký nhận tin"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": false,
+      "default": true
+    },
+    "subscribedAt": {
+      "type": "datetime",
+      "required": false
+    },
+    "unsubscribedAt": {
+      "type": "datetime",
+      "required": false
+    }
+  }
+}
+

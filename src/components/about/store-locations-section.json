@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_about_store_locations_sections",
+  "info": {
+    "displayName": "Store Locations Section",
+    "description": "Section hệ thống cửa hàng",
+    "icon": "map-marker-alt"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": false,
+      "default": "Địa điểm"
+    },
+    "badgeIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleHighlight": {
+      "type": "string",
+      "required": false
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "stores": {
+      "type": "component",
+      "component": "about.store-location",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

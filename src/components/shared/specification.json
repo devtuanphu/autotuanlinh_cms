@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_specifications",
+  "info": {
+    "displayName": "Thông số kỹ thuật",
+    "description": "Component để tạo bảng thông số kỹ thuật với key-value pairs",
+    "icon": "table"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
+

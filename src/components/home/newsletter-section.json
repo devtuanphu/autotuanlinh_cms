@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_home_newsletter_sections",
+  "info": {
+    "displayName": "Newsletter Section",
+    "description": "Section đăng ký nhận tin với icon, title, subtitle, button và privacy text",
+    "icon": "envelope"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Đăng ký nhận tin"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "buttonText": {
+      "type": "string",
+      "required": false,
+      "default": "Đăng ký"
+    },
+    "privacyText": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

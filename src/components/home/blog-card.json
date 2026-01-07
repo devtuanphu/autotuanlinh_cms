@@ -1,0 +1,50 @@
+{
+  "collectionName": "components_home_blog_cards",
+  "info": {
+    "displayName": "Blog Card",
+    "description": "Component thẻ blog với hình ảnh, tag, ngày đăng, tiêu đề, mô tả",
+    "icon": "file-alt"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "publishedDate": {
+      "type": "date",
+      "required": false
+    },
+    "readingTime": {
+      "type": "string",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "blog": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::blog.blog",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_partner_brands_sections",
+  "info": {
+    "displayName": "Partner Brands Section",
+    "description": "Section thương hiệu đối tác với title, subtitle và danh sách thương hiệu",
+    "icon": "handshake"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Thương hiệu đối tác"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "partnerBrands": {
+      "type": "component",
+      "component": "home.partner-brand",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

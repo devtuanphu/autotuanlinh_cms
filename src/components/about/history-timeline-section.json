@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_about_history_timeline_sections",
+  "info": {
+    "displayName": "History Timeline Section",
+    "description": "Section lịch sử phát triển với timeline",
+    "icon": "calendar-alt"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": false,
+      "default": "Hành trình"
+    },
+    "badgeIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleHighlight": {
+      "type": "string",
+      "required": false
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "milestones": {
+      "type": "component",
+      "component": "about.timeline-milestone",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

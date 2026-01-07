@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_shared_product_reviews",
+  "info": {
+    "displayName": "Product Review",
+    "description": "Component đánh giá sản phẩm với tên, email, rating và nội dung",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "customerName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "max": 5
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "isApproved": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    }
+  },
+  "config": {}
+}
+

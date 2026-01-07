@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_professional_services_sections",
+  "info": {
+    "displayName": "Professional Services Section",
+    "description": "Section dịch vụ chuyên nghiệp với title, subtitle và danh sách service cards",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Dịch vụ chuyên nghiệp"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "serviceCards": {
+      "type": "component",
+      "component": "home.service-card",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

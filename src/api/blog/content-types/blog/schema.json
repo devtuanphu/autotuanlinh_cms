@@ -1,0 +1,57 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blogs",
+  "info": {
+    "singularName": "blog",
+    "pluralName": "blogs",
+    "displayName": "Blog",
+    "description": "Collection type để quản lý bài viết blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "hashtag": {
+      "type": "text",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "avatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "moTaNgan": {
+      "type": "text",
+      "required": false
+    },
+    "noiDung": {
+      "type": "richtext",
+      "required": false
+    },
+    "topicBlog": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic-blog.topic-blog",
+      "required": false
+    }
+  }
+}
+

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_project_cards",
+  "info": {
+    "displayName": "Project Card",
+    "description": "Thẻ dự án trước và sau",
+    "icon": "folder-open"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

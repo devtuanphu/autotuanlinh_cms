@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "danh_muc_bai_viet_dich_vus",
+  "info": {
+    "singularName": "danh-muc-bai-viet-dich-vu",
+    "pluralName": "danh-muc-bai-viet-dich-vus",
+    "displayName": "Danh mục bài viết dịch vụ",
+    "description": "Danh mục bài viết dịch vụ cấp 1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "moTa": {
+      "type": "text",
+      "required": false
+    },
+    "anhDanhMuc": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "danhMucCapHai": {
+      "type": "component",
+      "component": "danhmuc-baiviet.danh-muc-bai-viet-cap-2",
+      "repeatable": true,
+      "required": false
+    }
+  }
+}
+

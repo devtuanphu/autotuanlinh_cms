@@ -1,0 +1,45 @@
+{
+  "collectionName": "components_shared_customer_infos",
+  "info": {
+    "displayName": "Customer Info",
+    "description": "Component thông tin khách hàng",
+    "icon": "user"
+  },
+  "options": {},
+  "attributes": {
+    "hoVaTen": {
+      "type": "string",
+      "required": true
+    },
+    "soDienThoai": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "diaChi": {
+      "type": "string",
+      "required": true
+    },
+    "tinhThanhPho": {
+      "type": "string",
+      "required": true
+    },
+    "quanHuyen": {
+      "type": "string",
+      "required": true
+    },
+    "phuongXa": {
+      "type": "string",
+      "required": true
+    },
+    "ghiChu": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

@@ -1,0 +1,217 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "heroSlider": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.hero-slider",
+      "repeatable": true,
+      "required": false
+    },
+    "featureCards": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.feature-card",
+      "repeatable": true,
+      "required": false
+    },
+    "whyChooseUs": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.why-choose-us",
+      "repeatable": false,
+      "required": false
+    },
+    "statsSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.stats-section",
+      "repeatable": false,
+      "required": false
+    },
+    "gallerySection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.gallery-section",
+      "repeatable": false,
+      "required": false
+    },
+    "partnerBrandsSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.partner-brands-section",
+      "repeatable": false,
+      "required": false
+    },
+    "processSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.process-section",
+      "repeatable": false,
+      "required": false
+    },
+    "faqSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.faq-section",
+      "repeatable": false,
+      "required": false
+    },
+    "testimonialsSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.testimonials-section",
+      "repeatable": false,
+      "required": false
+    },
+    "contactSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.contact-section",
+      "repeatable": false,
+      "required": false
+    },
+    "professionalServicesSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.professional-services-section",
+      "repeatable": false,
+      "required": false
+    },
+    "featuredProductsSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.featured-products-section",
+      "repeatable": false,
+      "required": false
+    },
+    "specialPromotionsSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.special-promotions-section",
+      "repeatable": false,
+      "required": false
+    },
+    "ctaSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.cta-section",
+      "repeatable": false,
+      "required": false
+    },
+    "latestNewsSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.latest-news-section",
+      "repeatable": false,
+      "required": false
+    },
+    "productCategoriesSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.product-categories-section",
+      "repeatable": false,
+      "required": false
+    },
+    "newsletterSection": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "home.newsletter-section",
+      "repeatable": false,
+      "required": false
+    }
+  }
+}

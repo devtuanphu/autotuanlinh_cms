@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_testimonials_sections",
+  "info": {
+    "displayName": "Testimonials Section",
+    "description": "Section đánh giá khách hàng với title, subtitle và danh sách testimonials",
+    "icon": "comments"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Khách hàng nói gì về chúng tôi"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "testimonials": {
+      "type": "component",
+      "component": "home.testimonial",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

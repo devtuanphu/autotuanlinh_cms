@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "danh_muc_bai_viets",
+  "info": {
+    "singularName": "danh-muc-bai-viet",
+    "pluralName": "danh-muc-bai-viets",
+    "displayName": "Danh mục bài viết sản phẩm",
+    "description": "Danh mục bài viết sản phẩm cấp 1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "moTa": {
+      "type": "text",
+      "required": false
+    },
+    "anhDanhMuc": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "danhMucCapHai": {
+      "type": "component",
+      "component": "danhmuc-baiviet.danh-muc-bai-viet-cap-2",
+      "repeatable": true,
+      "required": false
+    }
+  }
+}
+
+

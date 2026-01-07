@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_home_service_cards",
+  "info": {
+    "displayName": "Service Card",
+    "description": "Component thẻ dịch vụ với icon, hình ảnh, tiêu đề, mô tả và các tính năng",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "features": {
+      "type": "component",
+      "component": "home.service-feature",
+      "repeatable": true,
+      "required": false
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}

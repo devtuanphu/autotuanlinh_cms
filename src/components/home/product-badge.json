@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_product_badges",
+  "info": {
+    "displayName": "Product Badge",
+    "description": "Component badge cho sản phẩm (Bán chạy, Mới, Hot, giảm giá)",
+    "icon": "tag"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": ["bestseller", "new", "hot", "discount"],
+      "required": false,
+      "default": "discount"
+    }
+  },
+  "config": {}
+}
+

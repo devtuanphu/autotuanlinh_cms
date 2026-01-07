@@ -1,0 +1,50 @@
+{
+  "kind": "singleType",
+  "collectionName": "footers",
+  "info": {
+    "singularName": "footer",
+    "pluralName": "footers",
+    "displayName": "Footer",
+    "description": "Single type để quản lý thông tin footer"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "companyName": {
+      "type": "string",
+      "default": "Auto Tuan Linh",
+      "required": false
+    },
+    "companyDescription": {
+      "type": "text",
+      "required": false
+    },
+    "socialMedias": {
+      "type": "component",
+      "component": "shared.social-media",
+      "repeatable": true,
+      "required": false
+    },
+    "columns": {
+      "type": "component",
+      "component": "shared.footer-column",
+      "repeatable": true,
+      "required": false
+    },
+    "copyright": {
+      "type": "string",
+      "default": "© 2025 Auto Tuan Linh. Tất cả quyền được bảo lưu.",
+      "required": false
+    },
+    "privacyPolicyUrl": {
+      "type": "string",
+      "required": false
+    },
+    "termsOfUseUrl": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

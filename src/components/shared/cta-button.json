@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_cta_buttons",
+  "info": {
+    "displayName": "CTA Button",
+    "description": "Component button CTA với text, icon và URL",
+    "icon": "mouse-pointer"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    },
+    "icon": {
+      "type": "enumeration",
+      "enum": ["phone", "arrow-right", "arrow-left", "none"],
+      "required": false,
+      "default": "none"
+    },
+    "style": {
+      "type": "enumeration",
+      "enum": ["primary", "secondary"],
+      "required": false,
+      "default": "primary"
+    }
+  },
+  "config": {}
+}
+

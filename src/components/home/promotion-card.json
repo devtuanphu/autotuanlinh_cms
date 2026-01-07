@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_home_promotion_cards",
+  "info": {
+    "displayName": "Promotion Card",
+    "description": "Component thẻ khuyến mãi với hình ảnh, badge, discount, ngày kết thúc",
+    "icon": "gift"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "badge": {
+      "type": "enumeration",
+      "enum": ["Hot", "Mới", "FREE"],
+      "required": false
+    },
+    "discount": {
+      "type": "string",
+      "required": false
+    },
+    "isFree": {
+      "type": "boolean",
+      "required": false,
+      "default": false
+    },
+    "endDate": {
+      "type": "date",
+      "required": false
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": false
+    },
+    "link": {
+      "type": "string",
+      "required": false
+    },
+    "buttonText": {
+      "type": "string",
+      "required": false,
+      "default": "Xem ngay →"
+    }
+  },
+  "config": {}
+}
+

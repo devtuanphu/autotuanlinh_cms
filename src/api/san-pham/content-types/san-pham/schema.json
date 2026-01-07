@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "san_phams",
+  "info": {
+    "singularName": "san-pham",
+    "pluralName": "san-phams",
+    "displayName": "Sản phẩm",
+    "description": "Collection type để quản lý sản phẩm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "moTaNgan": {
+      "type": "text",
+      "required": false
+    },
+    "anhSanPham": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "giaGoc": {
+      "type": "decimal",
+      "required": false,
+      "min": 0
+    },
+    "giaBan": {
+      "type": "decimal",
+      "required": false,
+      "min": 0
+    },
+    "moTaChiTiet": {
+      "type": "richtext",
+      "required": false
+    },
+    "thongSo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.specification",
+      "required": false
+    },
+    "badges": {
+      "type": "enumeration",
+      "enum": ["Bán chạy", "Hot", "Mới"],
+      "required": false
+    },
+    "giamGia": {
+      "type": "integer",
+      "required": false,
+      "min": 0,
+      "max": 100
+    },
+    "reviews": {
+      "type": "component",
+      "component": "shared.product-review",
+      "repeatable": true,
+      "required": false
+    },
+    "rating": {
+      "type": "decimal",
+      "required": false,
+      "min": 0,
+      "max": 5
+    },
+    "reviewCount": {
+      "type": "integer",
+      "required": false,
+      "min": 0
+    }
+  }
+}
+

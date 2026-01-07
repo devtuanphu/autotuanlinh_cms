@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "don_hangs",
+  "info": {
+    "singularName": "don-hang",
+    "pluralName": "don-hangs",
+    "displayName": "Đơn hàng",
+    "description": "Collection type để quản lý đơn hàng"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "maDonHang": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "thongTinKhachHang": {
+      "type": "component",
+      "component": "shared.customer-info",
+      "repeatable": false,
+      "required": true
+    },
+    "sanPhams": {
+      "type": "component",
+      "component": "shared.order-item",
+      "repeatable": true,
+      "required": true,
+      "min": 1
+    },
+    "tamTinh": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "phiVanChuyen": {
+      "type": "decimal",
+      "required": true,
+      "min": 0,
+      "default": 0
+    },
+    "tongCong": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "phuongThucThanhToan": {
+      "type": "component",
+      "component": "shared.payment-method",
+      "repeatable": false,
+      "required": true
+    },
+    "trangThai": {
+      "type": "enumeration",
+      "enum": [
+        "cho_xac_nhan",
+        "da_xac_nhan",
+        "dang_giao_hang",
+        "da_giao_hang",
+        "da_huy"
+      ],
+      "default": "cho_xac_nhan",
+      "required": true
+    },
+    "ghiChuAdmin": {
+      "type": "text",
+      "required": false
+    }
+  }
+}
+

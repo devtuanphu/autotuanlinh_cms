@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_why_choose_uss",
+  "info": {
+    "displayName": "Why Choose Us",
+    "description": "Section tại sao chọn Auto Tuan Linh với title, subtitle và feature cards",
+    "icon": "question-circle"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Tại sao chọn Auto Tuan Linh?"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "featureCards": {
+      "type": "component",
+      "component": "home.feature-card",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_payment_methods",
+  "info": {
+    "displayName": "Payment Method",
+    "description": "Component phương thức thanh toán",
+    "icon": "credit-card"
+  },
+  "options": {},
+  "attributes": {
+    "loai": {
+      "type": "enumeration",
+      "enum": [
+        "cod",
+        "bank_transfer",
+        "momo",
+        "vnpay"
+      ],
+      "required": true
+    },
+    "ten": {
+      "type": "string",
+      "required": true
+    },
+    "moTa": {
+      "type": "text",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

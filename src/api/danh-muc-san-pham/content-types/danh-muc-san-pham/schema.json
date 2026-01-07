@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "danh_muc_san_phams",
+  "info": {
+    "singularName": "danh-muc-san-pham",
+    "pluralName": "danh-muc-san-phams",
+    "displayName": "Danh mục sản phẩm",
+    "description": "Danh mục sản phẩm cấp 1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "moTa": {
+      "type": "text",
+      "required": false
+    },
+    "anhDanhMuc": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "danhMucCapHai": {
+      "type": "component",
+      "component": "danhmuc.danh-muc-cap-2",
+      "repeatable": true
+    }
+  }
+}

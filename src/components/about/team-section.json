@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_about_team_sections",
+  "info": {
+    "displayName": "Team Section",
+    "description": "Section đội ngũ chuyên nghiệp",
+    "icon": "users"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": false,
+      "default": "Đội ngũ"
+    },
+    "badgeIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleHighlight": {
+      "type": "string",
+      "required": false
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "members": {
+      "type": "component",
+      "component": "about.team-member",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

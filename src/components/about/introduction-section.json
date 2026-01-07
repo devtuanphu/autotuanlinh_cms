@@ -1,0 +1,48 @@
+{
+  "collectionName": "components_about_introduction_sections",
+  "info": {
+    "displayName": "Introduction Section",
+    "description": "Section giới thiệu về công ty",
+    "icon": "info-circle"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": false,
+      "default": "Giới thiệu"
+    },
+    "badgeIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleHighlight": {
+      "type": "string",
+      "required": false
+    },
+    "paragraphs": {
+      "type": "text",
+      "required": false
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "imageOverlay": {
+      "type": "component",
+      "component": "about.image-overlay",
+      "repeatable": false,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

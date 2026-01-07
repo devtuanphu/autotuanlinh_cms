@@ -1,0 +1,22 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer_contacts",
+  "info": {
+    "singularName": "footer-contact",
+    "pluralName": "footer-contacts",
+    "displayName": "Footer Contact",
+    "description": "Single type để quản lý thông tin liên hệ hiển thị ở footer"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "contactInfoItems": {
+      "type": "component",
+      "component": "shared.contact-info-item",
+      "repeatable": true,
+      "required": false
+    }
+  }
+}

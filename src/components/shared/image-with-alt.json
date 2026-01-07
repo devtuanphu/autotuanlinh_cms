@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_image_with_alts",
+  "info": {
+    "displayName": "Image With Alt",
+    "description": "Component hình ảnh kèm alt text",
+    "icon": "image"
+  },
+  "options": {},
+  "attributes": {
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "alt": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}
+

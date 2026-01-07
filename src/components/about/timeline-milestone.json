@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_about_timeline_milestones",
+  "info": {
+    "displayName": "Timeline Milestone",
+    "description": "Một mốc thời gian trong timeline",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "year": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "required": true
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": ["left", "right"],
+      "default": "left",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "topic_blogs",
+  "info": {
+    "singularName": "topic-blog",
+    "pluralName": "topic-blogs",
+    "displayName": "Topic Blog",
+    "description": "Collection type để quản lý các topic/chủ đề cho blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}
+

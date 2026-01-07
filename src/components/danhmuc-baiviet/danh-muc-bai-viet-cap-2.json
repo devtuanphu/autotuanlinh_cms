@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_danhmuc_baiviet_danh_muc_bai_viet_cap_2s",
+  "info": {
+    "displayName": "Danh mục bài viết sản phẩm cấp 2",
+    "description": "Danh mục bài viết sản phẩm cấp 2, nằm trong danh mục bài viết sản phẩm cấp 1",
+    "icon": "file"
+  },
+  "options": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "text",
+      "required": true
+    },
+    "baiViets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    }
+  },
+  "config": {}
+}

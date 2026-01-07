@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_danhmuc_danh_muc_cap_3s",
+  "info": {
+    "displayName": "Danh mục sản phẩm cấp 3",
+    "description": "Danh mục sản phẩm cấp 3, nằm trong danh mục cấp 2",
+    "icon": "bookmark"
+  },
+  "options": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "slug": {
+      "type": "text",
+      "required": true
+    },
+    "san_phams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::san-pham.san-pham"
+    }
+  },
+  "config": {}
+}
+

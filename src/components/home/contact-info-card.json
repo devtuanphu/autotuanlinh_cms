@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_home_contact_info_cards",
+  "info": {
+    "displayName": "Contact Info Card",
+    "description": "Component thẻ thông tin liên hệ",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "details": {
+      "type": "text",
+      "required": false
+    },
+    "ctaText": {
+      "type": "string",
+      "required": false
+    },
+    "ctaUrl": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

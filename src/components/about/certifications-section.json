@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_about_certifications_sections",
+  "info": {
+    "displayName": "Certifications Section",
+    "description": "Section chứng nhận và giải thưởng",
+    "icon": "award"
+  },
+  "options": {},
+  "attributes": {
+    "badge": {
+      "type": "string",
+      "required": false,
+      "default": "Chứng nhận"
+    },
+    "badgeIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "titleHighlight": {
+      "type": "string",
+      "required": false
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false
+    },
+    "certificationCards": {
+      "type": "component",
+      "component": "about.certification-card",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

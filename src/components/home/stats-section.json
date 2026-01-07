@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_stats_sections",
+  "info": {
+    "displayName": "Stats Section",
+    "description": "Section thống kê với các stat cards",
+    "icon": "chart-bar"
+  },
+  "options": {},
+  "attributes": {
+    "statCards": {
+      "type": "component",
+      "component": "home.stat-card",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

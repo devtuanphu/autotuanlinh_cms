@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_order_items",
+  "info": {
+    "displayName": "Order Item",
+    "description": "Component sản phẩm trong đơn hàng",
+    "icon": "shopping-cart"
+  },
+  "options": {},
+  "attributes": {
+    "sanPham": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::san-pham.san-pham"
+    },
+    "soLuong": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "giaBan": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    },
+    "thanhTien": {
+      "type": "decimal",
+      "required": true,
+      "min": 0
+    }
+  },
+  "config": {}
+}
+

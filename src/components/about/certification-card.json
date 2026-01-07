@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_about_certification_cards",
+  "info": {
+    "displayName": "Certification Card",
+    "description": "Thẻ chứng nhận hoặc giải thưởng",
+    "icon": "certificate"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}
+

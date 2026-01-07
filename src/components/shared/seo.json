@@ -1,0 +1,113 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "SEO",
+    "description": "Component chứa các thông tin SEO cho trang web",
+    "icon": "search"
+  },
+  "options": {},
+  "attributes": {
+    "metaTitle": {
+      "type": "string",
+      "maxLength": 60,
+      "required": false
+    },
+    "metaDescription": {
+      "type": "text",
+      "maxLength": 160,
+      "required": false
+    },
+    "metaKeywords": {
+      "type": "string",
+      "required": false
+    },
+    "canonicalUrl": {
+      "type": "string",
+      "required": false
+    },
+    "ogTitle": {
+      "type": "string",
+      "maxLength": 60,
+      "required": false
+    },
+    "ogDescription": {
+      "type": "text",
+      "maxLength": 200,
+      "required": false
+    },
+    "ogImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ogType": {
+      "type": "enumeration",
+      "required": false,
+      "default": "website",
+      "enum": [
+        "website",
+        "article",
+        "product",
+        "video",
+        "music"
+      ]
+    },
+    "ogUrl": {
+      "type": "string",
+      "required": false
+    },
+    "ogSiteName": {
+      "type": "string",
+      "required": false
+    },
+    "twitterCard": {
+      "type": "enumeration",
+      "required": false,
+      "default": "summary_large_image",
+      "enum": [
+        "summary",
+        "summary_large_image",
+        "app",
+        "player"
+      ]
+    },
+    "twitterTitle": {
+      "type": "string",
+      "maxLength": 70,
+      "required": false
+    },
+    "twitterDescription": {
+      "type": "text",
+      "maxLength": 200,
+      "required": false
+    },
+    "twitterImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "twitterSite": {
+      "type": "string",
+      "required": false
+    },
+    "twitterCreator": {
+      "type": "string",
+      "required": false
+    },
+    "robots": {
+      "type": "string",
+      "default": "index, follow",
+      "required": false
+    },
+    "structuredData": {
+      "type": "json",
+      "required": false
+    }
+  }
+}
