@@ -1074,7 +1074,7 @@ export interface ApiVeChungToiVeChungToi extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     ctaSection: Schema.Attribute.Component<'about.cta-section', false>;
-    heroSection: Schema.Attribute.Component<'home.hero-slider', true>;
+    heroSection: Schema.Attribute.Component<'home.hero-slider', false>;
     historyTimelineSection: Schema.Attribute.Component<
       'about.history-timeline-section',
       false

@@ -21,7 +21,7 @@
     "heroSection": {
       "type": "component",
       "component": "home.hero-slider",
-      "repeatable": true,
+      "repeatable": false,
       "required": false
     },
     "introductionSection": {
