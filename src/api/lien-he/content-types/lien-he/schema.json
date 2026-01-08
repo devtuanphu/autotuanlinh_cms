@@ -1,0 +1,53 @@
+{
+  "kind": "singleType",
+  "collectionName": "lien_hes",
+  "info": {
+    "singularName": "lien-he",
+    "pluralName": "lien-hes",
+    "displayName": "Liên hệ",
+    "description": "Single type để quản lý trang liên hệ"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false,
+      "required": true
+    },
+    "contactCtaSection": {
+      "type": "component",
+      "component": "contact.contact-cta-section",
+      "repeatable": false,
+      "required": false
+    },
+    "contactInfoCardsSection": {
+      "type": "component",
+      "component": "contact.contact-info-cards-section",
+      "repeatable": false,
+      "required": false
+    },
+    "professionalServicesSection": {
+      "type": "component",
+      "component": "home.professional-services-section",
+      "repeatable": false,
+      "required": false
+    },
+    "contactFormSection": {
+      "type": "component",
+      "component": "contact.contact-form-section",
+      "repeatable": false,
+      "required": false
+    },
+    "faqSection": {
+      "type": "component",
+      "component": "home.faq-section",
+      "repeatable": false,
+      "required": false
+    }
+  }
+}
+

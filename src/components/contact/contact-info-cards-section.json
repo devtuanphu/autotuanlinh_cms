@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_contact_contact_info_cards_sections",
+  "info": {
+    "displayName": "Contact Info Cards Section",
+    "description": "Section với danh sách các contact info cards",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "contactInfoCards": {
+      "type": "component",
+      "component": "contact.contact-info-card",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

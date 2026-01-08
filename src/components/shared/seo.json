@@ -10,16 +10,19 @@
     "metaTitle": {
       "type": "string",
       "maxLength": 60,
-      "required": false
+      "required": false,
+      "default": "Liên hệ với Auto Tuan Linh - Phụ kiện ô tô chính hãng"
     },
     "metaDescription": {
       "type": "text",
       "maxLength": 160,
-      "required": false
+      "required": false,
+      "default": "Liên hệ với Auto Tuan Linh để được tư vấn miễn phí về phụ kiện ô tô chính hãng. Hotline: 1900 123 456, Email: info@autotuanlinh.com"
     },
     "metaKeywords": {
       "type": "string",
-      "required": false
+      "required": false,
+      "default": "liên hệ, phụ kiện ô tô, tư vấn, hotline, email"
     },
     "canonicalUrl": {
       "type": "string",

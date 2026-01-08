@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_contact_contact_badges",
+  "info": {
+    "displayName": "Contact Badge",
+    "description": "Badge nhỏ với icon và text",
+    "icon": "tag"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "text": {
+      "type": "string",
+      "required": true,
+      "default": ""
+    }
+  },
+  "config": {}
+}
+

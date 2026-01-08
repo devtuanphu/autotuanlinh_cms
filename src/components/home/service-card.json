@@ -29,7 +29,13 @@
     },
     "description": {
       "type": "text",
-      "required": false
+      "required": false,
+      "default": ""
+    },
+    "link": {
+      "type": "string",
+      "required": false,
+      "default": ""
     },
     "features": {
       "type": "component",

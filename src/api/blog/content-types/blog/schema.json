@@ -36,7 +36,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "moTaNgan": {
       "type": "text",
@@ -46,12 +48,10 @@
       "type": "richtext",
       "required": false
     },
-    "topicBlog": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::topic-blog.topic-blog",
-      "required": false
+    "isNoiBat": {
+      "type": "boolean",
+      "required": false,
+      "default": false
     }
   }
 }
-

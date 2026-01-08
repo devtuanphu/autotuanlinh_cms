@@ -16,11 +16,12 @@
     "title": {
       "type": "string",
       "required": false,
-      "default": "Câu hỏi thường gặp"
+      "default": "Bạn có thắc mắc?"
     },
     "subtitle": {
       "type": "text",
-      "required": false
+      "required": false,
+      "default": "Tìm câu trả lời cho những câu hỏi phổ biến nhất"
     },
     "faqItems": {
       "type": "component",

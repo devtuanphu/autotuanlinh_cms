@@ -8,17 +8,11 @@ export async function seedData(strapi: Core.Strapi) {
     const forceSeed = process.env.FORCE_SEED === 'true';
     if (!forceSeed) {
       try {
-        const existingTopics = await strapi.entityService.findMany('api::topic-blog.topic-blog', { limit: 1 });
+
         const existingBlogs = await strapi.entityService.findMany('api::blog.blog', { limit: 1 });
         const existingDanhMuc = await strapi.entityService.findMany('api::danh-muc-san-pham.danh-muc-san-pham', { limit: 1 });
         
-        if (existingTopics && existingTopics.length > 0 && 
-            existingBlogs && existingBlogs.length > 0 && 
-            existingDanhMuc && existingDanhMuc.length > 0) {
-          console.log('✅ Collection types data already exists. Skipping seed...');
-          console.log('💡 To re-seed, please delete existing data first or set FORCE_SEED=true');
-          return;
-        }
+       
       } catch (error) {
         // If error, continue seeding
         console.log('ℹ️ No existing data found, proceeding with seed...');
@@ -28,27 +22,7 @@ export async function seedData(strapi: Core.Strapi) {
     }
 
     // 1. Seed Topic Blog
-    console.log('📝 Seeding Topic Blog...');
-    const topics = await Promise.all([
-      strapi.entityService.create('api::topic-blog.topic-blog', {
-        data: {
-          name: 'Công nghệ',
-          publishedAt: new Date(),
-        },
-      }),
-      strapi.entityService.create('api::topic-blog.topic-blog', {
-        data: {
-          name: 'Kinh doanh',
-          publishedAt: new Date(),
-        },
-      }),
-      strapi.entityService.create('api::topic-blog.topic-blog', {
-        data: {
-          name: 'Giáo dục',
-          publishedAt: new Date(),
-        },
-      }),
-    ]);
+ 
 
     // 2. Seed Blog (30 bài viết)
     console.log('📝 Seeding Blog (30 bài viết)...');
@@ -113,7 +87,7 @@ export async function seedData(strapi: Core.Strapi) {
             title: item.title,
             moTaNgan: `${item.title}. ${descriptions[index % descriptions.length]}`,
             noiDung: `<p>Nội dung chi tiết về ${item.title.toLowerCase()}...</p><p>Đây là bài viết cung cấp thông tin đầy đủ và hữu ích cho khách hàng.</p>`,
-            topicBlog: topics[item.topic].id,
+          
             publishedAt: new Date(),
           },
         });

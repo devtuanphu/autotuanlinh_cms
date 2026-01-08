@@ -1,0 +1,47 @@
+{
+  "collectionName": "components_contact_contact_info_cards",
+  "info": {
+    "displayName": "Contact Info Card",
+    "description": "Card thông tin liên hệ với icon, title, value, description và badge",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "default": ""
+    },
+    "url": {
+      "type": "string",
+      "required": false,
+      "default": ""
+    },
+    "badge": {
+      "type": "component",
+      "component": "contact.contact-badge",
+      "repeatable": false,
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}
+

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_contact_working_hours",
+  "info": {
+    "displayName": "Working Hours",
+    "description": "Component giờ làm việc với title, subtitle và danh sách time slots",
+    "icon": "clock"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Giờ làm việc"
+    },
+    "subtitle": {
+      "type": "string",
+      "required": false,
+      "default": "Chúng tôi luôn sẵn sàng"
+    },
+    "timeSlots": {
+      "type": "component",
+      "component": "contact.time-slot",
+      "repeatable": true,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

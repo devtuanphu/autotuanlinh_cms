@@ -14,7 +14,8 @@
     },
     "subtitle": {
       "type": "text",
-      "required": false
+      "required": false,
+      "default": "Cam kết mang đến trải nghiệm tốt nhất cho khách hàng"
     },
     "serviceCards": {
       "type": "component",

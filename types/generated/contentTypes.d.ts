@@ -447,6 +447,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     hashtag: Schema.Attribute.Text;
+    isNoiBat: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
@@ -457,10 +458,6 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    topicBlog: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::topic-blog.topic-blog'
-    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -897,6 +894,53 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiLienHeLienHe extends Struct.SingleTypeSchema {
+  collectionName: 'lien_hes';
+  info: {
+    description: 'Single type \u0111\u1EC3 qu\u1EA3n l\u00FD trang li\u00EAn h\u1EC7';
+    displayName: 'Li\u00EAn h\u1EC7';
+    pluralName: 'lien-hes';
+    singularName: 'lien-he';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    contactCtaSection: Schema.Attribute.Component<
+      'contact.contact-cta-section',
+      false
+    >;
+    contactFormSection: Schema.Attribute.Component<
+      'contact.contact-form-section',
+      false
+    >;
+    contactInfoCardsSection: Schema.Attribute.Component<
+      'contact.contact-info-cards-section',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    faqSection: Schema.Attribute.Component<'home.faq-section', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::lien-he.lien-he'
+    > &
+      Schema.Attribute.Private;
+    professionalServicesSection: Schema.Attribute.Component<
+      'home.professional-services-section',
+      false
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false> &
+      Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiNewsletterSubscriptionNewsletterSubscription
   extends Struct.CollectionTypeSchema {
   collectionName: 'newsletter_subscriptions';
@@ -1003,35 +1047,6 @@ export interface ApiSanPhamSanPham extends Struct.CollectionTypeSchema {
     slug: Schema.Attribute.UID<'title'>;
     thongSo: Schema.Attribute.Component<'shared.specification', true>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
-export interface ApiTopicBlogTopicBlog extends Struct.CollectionTypeSchema {
-  collectionName: 'topic_blogs';
-  info: {
-    description: 'Collection type \u0111\u1EC3 qu\u1EA3n l\u00FD c\u00E1c topic/ch\u1EE7 \u0111\u1EC1 cho blog';
-    displayName: 'Topic Blog';
-    pluralName: 'topic-blogs';
-    singularName: 'topic-blog';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::topic-blog.topic-blog'
-    > &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String & Schema.Attribute.Required;
-    publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1638,9 +1653,9 @@ declare module '@strapi/strapi' {
       'api::footer-contact.footer-contact': ApiFooterContactFooterContact;
       'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
+      'api::lien-he.lien-he': ApiLienHeLienHe;
       'api::newsletter-subscription.newsletter-subscription': ApiNewsletterSubscriptionNewsletterSubscription;
       'api::san-pham.san-pham': ApiSanPhamSanPham;
-      'api::topic-blog.topic-blog': ApiTopicBlogTopicBlog;
       'api::ve-chung-toi.ve-chung-toi': ApiVeChungToiVeChungToi;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

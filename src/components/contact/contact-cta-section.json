@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_contact_cta_sections",
+  "info": {
+    "displayName": "Contact CTA Section",
+    "description": "Section CTA liên hệ với icon, title, subtitle và buttons",
+    "icon": "phone"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "badge": {
+      "type": "string",
+      "required": false,
+      "default": "LIÊN HỆ NGAY"
+    },
+    "title": {
+      "type": "string",
+      "required": false,
+      "default": "Chúng tôi sẵn sàng"
+    },
+    "subtitle": {
+      "type": "text",
+      "required": false,
+      "default": "hỗ trợ bạn"
+    },
+    "description": {
+      "type": "text",
+      "required": false,
+      "default": "Liên hệ với chúng tôi để được tư vấn miễn phí và nhận những giải pháp tốt nhất cho nhu cầu của bạn"
+    },
+    "primaryButton": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false,
+      "required": false
+    },
+    "secondaryButton": {
+      "type": "component",
+      "component": "shared.cta-button",
+      "repeatable": false,
+      "required": false
+    }
+  },
+  "config": {}
+}
+

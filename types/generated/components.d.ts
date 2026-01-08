@@ -346,6 +346,128 @@ export interface AboutWorkshopSection extends Struct.ComponentSchema {
   };
 }
 
+export interface ContactContactBadge extends Struct.ComponentSchema {
+  collectionName: 'components_contact_contact_badges';
+  info: {
+    description: 'Badge nh\u1ECF v\u1EDBi icon v\u00E0 text';
+    displayName: 'Contact Badge';
+    icon: 'tag';
+  };
+  attributes: {
+    icon: Schema.Attribute.Media<'images'>;
+    text: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<''>;
+  };
+}
+
+export interface ContactContactCtaSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_cta_sections';
+  info: {
+    description: 'Section CTA li\u00EAn h\u1EC7 v\u1EDBi icon, title, subtitle v\u00E0 buttons';
+    displayName: 'Contact CTA Section';
+    icon: 'phone';
+  };
+  attributes: {
+    badge: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'LI\u00CAN H\u1EC6 NGAY'>;
+    description: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Li\u00EAn h\u1EC7 v\u1EDBi ch\u00FAng t\u00F4i \u0111\u1EC3 \u0111\u01B0\u1EE3c t\u01B0 v\u1EA5n mi\u1EC5n ph\u00ED v\u00E0 nh\u1EADn nh\u1EEFng gi\u1EA3i ph\u00E1p t\u1ED1t nh\u1EA5t cho nhu c\u1EA7u c\u1EE7a b\u1EA1n'>;
+    icon: Schema.Attribute.Media<'images'>;
+    primaryButton: Schema.Attribute.Component<'shared.cta-button', false>;
+    secondaryButton: Schema.Attribute.Component<'shared.cta-button', false>;
+    subtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'h\u1ED7 tr\u1EE3 b\u1EA1n'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Ch\u00FAng t\u00F4i s\u1EB5n s\u00E0ng'>;
+  };
+}
+
+export interface ContactContactFormSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_contact_form_sections';
+  info: {
+    description: 'Section form li\u00EAn h\u1EC7 v\u1EDBi form fields, map, gi\u1EDD l\u00E0m vi\u1EC7c v\u00E0 social links';
+    displayName: 'Contact Form Section';
+    icon: 'envelope';
+  };
+  attributes: {
+    badge: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'G\u1EECI TIN NH\u1EAEN'>;
+    mapEmbedUrl: Schema.Attribute.Text;
+    mapLink: Schema.Attribute.String;
+    mapTitle: Schema.Attribute.String;
+    socialLinks: Schema.Attribute.Component<'shared.social-media', true>;
+    subtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'\u0110i\u1EC1n th\u00F4ng tin b\u00EAn d\u01B0\u1EDBi, ch\u00FAng t\u00F4i s\u1EBD li\u00EAn h\u1EC7 l\u1EA1i v\u1EDBi b\u1EA1n trong th\u1EDDi gian s\u1EDBm nh\u1EA5t'>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Li\u00EAn h\u1EC7 v\u1EDBi ch\u00FAng t\u00F4i'>;
+    workingHours: Schema.Attribute.Component<'contact.working-hours', false>;
+  };
+}
+
+export interface ContactContactInfoCard extends Struct.ComponentSchema {
+  collectionName: 'components_contact_contact_info_cards';
+  info: {
+    description: 'Card th\u00F4ng tin li\u00EAn h\u1EC7 v\u1EDBi icon, title, value, description v\u00E0 badge';
+    displayName: 'Contact Info Card';
+    icon: 'address-card';
+  };
+  attributes: {
+    badge: Schema.Attribute.Component<'contact.contact-badge', false>;
+    description: Schema.Attribute.String & Schema.Attribute.DefaultTo<''>;
+    icon: Schema.Attribute.Media<'images'>;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    url: Schema.Attribute.String;
+    value: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ContactContactInfoCardsSection extends Struct.ComponentSchema {
+  collectionName: 'components_contact_contact_info_cards_sections';
+  info: {
+    description: 'Section v\u1EDBi danh s\u00E1ch c\u00E1c contact info cards';
+    displayName: 'Contact Info Cards Section';
+    icon: 'address-book';
+  };
+  attributes: {
+    contactInfoCards: Schema.Attribute.Component<
+      'contact.contact-info-card',
+      true
+    >;
+  };
+}
+
+export interface ContactTimeSlot extends Struct.ComponentSchema {
+  collectionName: 'components_contact_time_slots';
+  info: {
+    description: 'Component m\u1ED9t kho\u1EA3ng th\u1EDDi gian l\u00E0m vi\u1EC7c';
+    displayName: 'Time Slot';
+    icon: 'calendar-alt';
+  };
+  attributes: {
+    days: Schema.Attribute.String & Schema.Attribute.Required;
+    hours: Schema.Attribute.String & Schema.Attribute.Required;
+    icon: Schema.Attribute.Media<'images'>;
+    label: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface ContactWorkingHours extends Struct.ComponentSchema {
+  collectionName: 'components_contact_working_hours';
+  info: {
+    description: 'Component gi\u1EDD l\u00E0m vi\u1EC7c v\u1EDBi title, subtitle v\u00E0 danh s\u00E1ch time slots';
+    displayName: 'Working Hours';
+    icon: 'clock';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Ch\u00FAng t\u00F4i lu\u00F4n s\u1EB5n s\u00E0ng'>;
+    timeSlots: Schema.Attribute.Component<'contact.time-slot', true>;
+    title: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Gi\u1EDD l\u00E0m vi\u1EC7c'>;
+  };
+}
+
 export interface DanhmucBaivietDanhMucBaiVietCap2
   extends Struct.ComponentSchema {
   collectionName: 'components_danhmuc_baiviet_danh_muc_bai_viet_cap_2s';
@@ -503,9 +625,10 @@ export interface HomeFaqSection extends Struct.ComponentSchema {
   attributes: {
     faqItems: Schema.Attribute.Component<'home.faq-item', true>;
     icon: Schema.Attribute.Media<'images'>;
-    subtitle: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'T\u00ECm c\u00E2u tr\u1EA3 l\u1EDDi cho nh\u1EEFng c\u00E2u h\u1ECFi ph\u1ED5 bi\u1EBFn nh\u1EA5t'>;
     title: Schema.Attribute.String &
-      Schema.Attribute.DefaultTo<'C\u00E2u h\u1ECFi th\u01B0\u1EDDng g\u1EB7p'>;
+      Schema.Attribute.DefaultTo<'B\u1EA1n c\u00F3 th\u1EAFc m\u1EAFc?'>;
   };
 }
 
@@ -776,7 +899,8 @@ export interface HomeProfessionalServicesSection
   };
   attributes: {
     serviceCards: Schema.Attribute.Component<'home.service-card', true>;
-    subtitle: Schema.Attribute.Text;
+    subtitle: Schema.Attribute.Text &
+      Schema.Attribute.DefaultTo<'Cam k\u1EBFt mang \u0111\u1EBFn tr\u1EA3i nghi\u1EC7m t\u1ED1t nh\u1EA5t cho kh\u00E1ch h\u00E0ng'>;
     title: Schema.Attribute.String &
       Schema.Attribute.DefaultTo<'D\u1ECBch v\u1EE5 chuy\u00EAn nghi\u1EC7p'>;
   };
@@ -811,7 +935,7 @@ export interface HomeServiceCard extends Struct.ComponentSchema {
     icon: 'briefcase';
   };
   attributes: {
-    description: Schema.Attribute.Text;
+    description: Schema.Attribute.Text & Schema.Attribute.DefaultTo<''>;
     features: Schema.Attribute.Component<'home.service-feature', true>;
     icon: Schema.Attribute.Media<'images'>;
     image: Schema.Attribute.Media<'images'>;
@@ -1108,12 +1232,15 @@ export interface SharedSeo extends Struct.ComponentSchema {
     metaDescription: Schema.Attribute.Text &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 160;
-      }>;
-    metaKeywords: Schema.Attribute.String;
+      }> &
+      Schema.Attribute.DefaultTo<'Li\u00EAn h\u1EC7 v\u1EDBi Auto Tuan Linh \u0111\u1EC3 \u0111\u01B0\u1EE3c t\u01B0 v\u1EA5n mi\u1EC5n ph\u00ED v\u1EC1 ph\u1EE5 ki\u1EC7n \u00F4 t\u00F4 ch\u00EDnh h\u00E3ng. Hotline: 1900 123 456, Email: info@autotuanlinh.com'>;
+    metaKeywords: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'li\u00EAn h\u1EC7, ph\u1EE5 ki\u1EC7n \u00F4 t\u00F4, t\u01B0 v\u1EA5n, hotline, email'>;
     metaTitle: Schema.Attribute.String &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 60;
-      }>;
+      }> &
+      Schema.Attribute.DefaultTo<'Li\u00EAn h\u1EC7 v\u1EDBi Auto Tuan Linh - Ph\u1EE5 ki\u1EC7n \u00F4 t\u00F4 ch\u00EDnh h\u00E3ng'>;
     ogDescription: Schema.Attribute.Text &
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 200;
@@ -1200,6 +1327,13 @@ declare module '@strapi/strapi' {
       'about.timeline-milestone': AboutTimelineMilestone;
       'about.value-card': AboutValueCard;
       'about.workshop-section': AboutWorkshopSection;
+      'contact.contact-badge': ContactContactBadge;
+      'contact.contact-cta-section': ContactContactCtaSection;
+      'contact.contact-form-section': ContactContactFormSection;
+      'contact.contact-info-card': ContactContactInfoCard;
+      'contact.contact-info-cards-section': ContactContactInfoCardsSection;
+      'contact.time-slot': ContactTimeSlot;
+      'contact.working-hours': ContactWorkingHours;
       'danhmuc-baiviet.danh-muc-bai-viet-cap-2': DanhmucBaivietDanhMucBaiVietCap2;
       'danhmuc-baiviet.danh-muc-bai-viet-cap-3': DanhmucBaivietDanhMucBaiVietCap3;
       'danhmuc.danh-muc-cap-2': DanhmucDanhMucCap2;
