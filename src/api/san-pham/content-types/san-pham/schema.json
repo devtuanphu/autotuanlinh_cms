@@ -8,14 +8,14 @@
     "description": "Collection type để quản lý sản phẩm"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
     "seo": {
       "type": "component",
-      "repeatable": false,
       "component": "shared.seo",
+      "repeatable": false,
       "required": true
     },
     "title": {
@@ -36,7 +36,9 @@
       "type": "media",
       "multiple": true,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "giaGoc": {
       "type": "decimal",
@@ -54,14 +56,18 @@
     },
     "thongSo": {
       "type": "component",
-      "repeatable": true,
       "component": "shared.specification",
+      "repeatable": true,
       "required": false
     },
     "badges": {
       "type": "enumeration",
-      "enum": ["Bán chạy", "Hot", "Mới"],
-      "required": false
+      "required": false,
+      "enum": [
+        "Bán chạy",
+        "Hot",
+        "Mới"
+      ]
     },
     "giamGia": {
       "type": "integer",
@@ -88,4 +94,3 @@
     }
   }
 }
-

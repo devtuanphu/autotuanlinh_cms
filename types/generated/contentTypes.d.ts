@@ -985,7 +985,7 @@ export interface ApiSanPhamSanPham extends Struct.CollectionTypeSchema {
     singularName: 'san-pham';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     anhSanPham: Schema.Attribute.Media<'images', true>;
