@@ -8,7 +8,7 @@
     "description": "Danh mục bài viết sản phẩm cấp 1"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {

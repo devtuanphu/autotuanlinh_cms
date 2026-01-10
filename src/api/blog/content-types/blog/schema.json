@@ -8,7 +8,7 @@
     "description": "Collection type để quản lý bài viết blog"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
