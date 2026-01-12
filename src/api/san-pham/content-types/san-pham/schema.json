@@ -50,10 +50,6 @@
       "required": false,
       "min": 0
     },
-    "moTaChiTiet": {
-      "type": "richtext",
-      "required": false
-    },
     "thongSo": {
       "type": "component",
       "component": "shared.specification",
@@ -91,6 +87,13 @@
       "type": "integer",
       "required": false,
       "min": 0
+    },
+    "moTaChiTiet": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
     }
   }
 }

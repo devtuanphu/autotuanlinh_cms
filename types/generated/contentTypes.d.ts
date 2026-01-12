@@ -439,7 +439,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     singularName: 'blog';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     avatar: Schema.Attribute.Media<'images'>;
@@ -452,7 +452,13 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
     moTaNgan: Schema.Attribute.Text;
-    noiDung: Schema.Attribute.RichText;
+    noiDung: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     publishedAt: Schema.Attribute.DateTime;
     seo: Schema.Attribute.Component<'shared.seo', false> &
       Schema.Attribute.Required;
@@ -474,7 +480,7 @@ export interface ApiDanhMucBaiVietDichVuDanhMucBaiVietDichVu
     singularName: 'danh-muc-bai-viet-dich-vu';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     anhDanhMuc: Schema.Attribute.Media<'images'>;
@@ -513,7 +519,7 @@ export interface ApiDanhMucBaiVietDanhMucBaiViet
     singularName: 'danh-muc-bai-viet';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     anhDanhMuc: Schema.Attribute.Media<'images'>;
@@ -552,7 +558,7 @@ export interface ApiDanhMucSanPhamDanhMucSanPham
     singularName: 'danh-muc-san-pham';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     anhDanhMuc: Schema.Attribute.Media<'images'>;
@@ -1023,7 +1029,13 @@ export interface ApiSanPhamSanPham extends Struct.CollectionTypeSchema {
       'api::san-pham.san-pham'
     > &
       Schema.Attribute.Private;
-    moTaChiTiet: Schema.Attribute.RichText;
+    moTaChiTiet: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     moTaNgan: Schema.Attribute.Text;
     publishedAt: Schema.Attribute.DateTime;
     rating: Schema.Attribute.Decimal &

@@ -44,14 +44,17 @@
       "type": "text",
       "required": false
     },
-    "noiDung": {
-      "type": "richtext",
-      "required": false
-    },
     "isNoiBat": {
       "type": "boolean",
       "required": false,
       "default": false
+    },
+    "noiDung": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
     }
   }
 }
