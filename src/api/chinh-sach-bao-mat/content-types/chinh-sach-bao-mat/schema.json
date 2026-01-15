@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "chinh_sach_bao_mats",
+  "info": {
+    "singularName": "chinh-sach-bao-mat",
+    "pluralName": "chinh-sach-bao-mats",
+    "displayName": "Chính sách bảo mật"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

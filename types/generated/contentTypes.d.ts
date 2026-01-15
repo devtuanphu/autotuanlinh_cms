@@ -470,6 +470,42 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiChinhSachBaoMatChinhSachBaoMat
+  extends Struct.SingleTypeSchema {
+  collectionName: 'chinh_sach_bao_mats';
+  info: {
+    displayName: 'Ch\u00EDnh s\u00E1ch b\u1EA3o m\u1EADt';
+    pluralName: 'chinh-sach-bao-mats';
+    singularName: 'chinh-sach-bao-mat';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::chinh-sach-bao-mat.chinh-sach-bao-mat'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDanhMucBaiVietDichVuDanhMucBaiVietDichVu
   extends Struct.CollectionTypeSchema {
   collectionName: 'danh_muc_bai_viet_dich_vus';
@@ -578,6 +614,42 @@ export interface ApiDanhMucSanPhamDanhMucSanPham
       Schema.Attribute.Required;
     slug: Schema.Attribute.UID<'title'>;
     title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiDieuKhoanSuDungDieuKhoanSuDung
+  extends Struct.SingleTypeSchema {
+  collectionName: 'dieu_khoan_su_dungs';
+  info: {
+    displayName: '\u0110i\u1EC1u kho\u1EA3n s\u1EED d\u1EE5ng';
+    pluralName: 'dieu-khoan-su-dungs';
+    singularName: 'dieu-khoan-su-dung';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::dieu-khoan-su-dung.dieu-khoan-su-dung'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -897,6 +969,42 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+  };
+}
+
+export interface ApiHuongDanMuaHangHuongDanMuaHang
+  extends Struct.SingleTypeSchema {
+  collectionName: 'huong_dan_mua_hangs';
+  info: {
+    displayName: 'H\u01B0\u1EDBng d\u1EABn mua h\u00E0ng';
+    pluralName: 'huong-dan-mua-hangs';
+    singularName: 'huong-dan-mua-hang';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::huong-dan-mua-hang.huong-dan-mua-hang'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
   };
 }
 
@@ -1658,13 +1766,16 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::blog.blog': ApiBlogBlog;
+      'api::chinh-sach-bao-mat.chinh-sach-bao-mat': ApiChinhSachBaoMatChinhSachBaoMat;
       'api::danh-muc-bai-viet-dich-vu.danh-muc-bai-viet-dich-vu': ApiDanhMucBaiVietDichVuDanhMucBaiVietDichVu;
       'api::danh-muc-bai-viet.danh-muc-bai-viet': ApiDanhMucBaiVietDanhMucBaiViet;
       'api::danh-muc-san-pham.danh-muc-san-pham': ApiDanhMucSanPhamDanhMucSanPham;
+      'api::dieu-khoan-su-dung.dieu-khoan-su-dung': ApiDieuKhoanSuDungDieuKhoanSuDung;
       'api::don-hang.don-hang': ApiDonHangDonHang;
       'api::footer-contact.footer-contact': ApiFooterContactFooterContact;
       'api::footer.footer': ApiFooterFooter;
       'api::home.home': ApiHomeHome;
+      'api::huong-dan-mua-hang.huong-dan-mua-hang': ApiHuongDanMuaHangHuongDanMuaHang;
       'api::lien-he.lien-he': ApiLienHeLienHe;
       'api::newsletter-subscription.newsletter-subscription': ApiNewsletterSubscriptionNewsletterSubscription;
       'api::san-pham.san-pham': ApiSanPhamSanPham;

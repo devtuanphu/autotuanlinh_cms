@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "huong_dan_mua_hangs",
+  "info": {
+    "singularName": "huong-dan-mua-hang",
+    "pluralName": "huong-dan-mua-hangs",
+    "displayName": "Hướng dẫn mua hàng"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

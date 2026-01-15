@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "dieu_khoan_su_dungs",
+  "info": {
+    "singularName": "dieu-khoan-su-dung",
+    "pluralName": "dieu-khoan-su-dungs",
+    "displayName": "Điều khoản sử dụng"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "content": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}
