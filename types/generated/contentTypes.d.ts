@@ -1173,6 +1173,51 @@ export interface ApiSanPhamSanPham extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiThongTinLienHeThongTinLienHe
+  extends Struct.SingleTypeSchema {
+  collectionName: 'thong_tin_lien_he';
+  info: {
+    description: 'Th\u00F4ng tin li\u00EAn h\u1EC7 c\u1EE7a c\u00F4ng ty';
+    displayName: 'Th\u00F4ng tin li\u00EAn h\u1EC7';
+    pluralName: 'thong-tin-lien-hes';
+    singularName: 'thong-tin-lien-he';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    link_messenger: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::thong-tin-lien-he.thong-tin-lien-he'
+    > &
+      Schema.Attribute.Private;
+    phone_chu_tich: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 20;
+        minLength: 10;
+      }>;
+    phone_giam_doc: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 20;
+        minLength: 10;
+      }>;
+    phone_zalo: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 20;
+        minLength: 10;
+      }>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiVeChungToiVeChungToi extends Struct.SingleTypeSchema {
   collectionName: 've_chung_tois';
   info: {
@@ -1779,6 +1824,7 @@ declare module '@strapi/strapi' {
       'api::lien-he.lien-he': ApiLienHeLienHe;
       'api::newsletter-subscription.newsletter-subscription': ApiNewsletterSubscriptionNewsletterSubscription;
       'api::san-pham.san-pham': ApiSanPhamSanPham;
+      'api::thong-tin-lien-he.thong-tin-lien-he': ApiThongTinLienHeThongTinLienHe;
       'api::ve-chung-toi.ve-chung-toi': ApiVeChungToiVeChungToi;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "thong_tin_lien_he",
+  "info": {
+    "singularName": "thong-tin-lien-he",
+    "pluralName": "thong-tin-lien-hes",
+    "displayName": "Thông tin liên hệ",
+    "description": "Thông tin liên hệ của công ty"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phone_giam_doc": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 20,
+      "required": false
+    },
+    "phone_chu_tich": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 20,
+      "required": false
+    },
+    "phone_zalo": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 20,
+      "required": false
+    },
+    "link_messenger": {
+      "type": "string",
+      "required": false
+    }
+  }
+}
